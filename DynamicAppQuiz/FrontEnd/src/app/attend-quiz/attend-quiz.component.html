@@ -1,0 +1,14 @@
+<div class="timer">Time left: {{ formatTime(timeLeft) }}</div>
+
+<div *ngFor="let question of questions; let i = index" class="question-container">
+  <h3 class="question-number">{{ i + 1 }}.</h3>
+  <div class="question-text">{{ question.question }}</div>
+  <div *ngFor="let option of question.options" class="option-container">
+    <label class="option-label">
+      <input type="radio" name="{{ question._id }}" [value]="option" class="option-input"
+             (change)="selectAnswer(question._id, option)" [checked]="selectedAnswers[question._id] === option">
+      {{ option }}
+    </label>
+  </div>
+</div>
+<button class="submit-button" (click)="submitQuiz()">Submit Quiz</button>

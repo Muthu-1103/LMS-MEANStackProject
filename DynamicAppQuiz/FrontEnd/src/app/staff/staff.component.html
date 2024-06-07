@@ -1,0 +1,24 @@
+<div class="user-manage">
+  <h1>Welcome</h1>
+  <p>Select the list of Students to create a Group</p>
+  <table class="user-table">
+    <thead>
+      <th>Username</th>
+      <th>EmailId</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users;let i = index;">
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td><input type="checkbox" [(ngModel)]="user.selected"> Add</td>
+      </tr>
+    </tbody>
+  </table>
+  <label>Enter Group Name:</label>
+  <input type="text" name="grp" [(ngModel)]="group.groupName"/>
+  <label>Enter Your MailId:</label>
+  <input type="text" name="grp" [(ngModel)]="group.staffName"/><br>
+
+  <button (click)="createGroup()">Create Group</button>
+</div>

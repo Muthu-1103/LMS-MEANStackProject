@@ -1,0 +1,22 @@
+<h2>Create Quiz</h2>
+<form (ngSubmit)="onSubmit()">
+  <div *ngFor="let question of questions; let i = index" class="question">
+    <h3>Question {{ i + 1 }}</h3>
+    <label for="question{{ i }}">Question:</label>
+    <input type="text" id="question{{ i }}" name="question{{ i }}" [(ngModel)]="question.question">
+    <label for="option1{{ i }}">Option 1:</label>
+    <input type="text" id="option1{{ i }}" name="option1{{ i }}" [(ngModel)]="question.options[0]">
+    <label for="option2{{ i }}">Option 2:</label>
+    <input type="text" id="option2{{ i }}" name="option2{{ i }}" [(ngModel)]="question.options[1]">
+    <label for="option3{{ i }}">Option 3:</label>
+    <input type="text" id="option3{{ i }}" name="option3{{ i }}" [(ngModel)]="question.options[2]">
+    <label for="option4{{ i }}">Option 4:</label>
+    <input type="text" id="option4{{ i }}" name="option4{{ i }}" [(ngModel)]="question.options[3]">
+    <label for="correctOption{{ i }}">Correct Option:</label>
+    <select id="correctOption{{ i }}" name="correctOption{{ i }}" [(ngModel)]="question.correctOption">
+      <option *ngFor="let option of question.options; let j = index" [value]="j">Option {{ j + 1 }}</option>
+    </select>
+  </div>
+  <button type="button" (click)="addQuestion()">Add Question</button>
+  <button type="submit">Create Quiz</button>
+</form>

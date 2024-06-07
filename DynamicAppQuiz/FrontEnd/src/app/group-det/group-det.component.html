@@ -1,0 +1,12 @@
+<div>
+    <h3>List of Students under {{myName}}</h3>
+    <ul>
+      <li *ngFor="let userId of groupMembers">{{ userId }}</li>
+    </ul>
+  </div>
+  <div>
+    <div class="button-container">
+  <button (click)="navigateToPostMes(myName, groupMembers,groupName)">Post Message</button>
+  <button type="button" class="btn btn-secondary" (click)="assignQuiz(myName, groupMembers,groupName)">Assign Quiz</button>
+</div>
+</div>

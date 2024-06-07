@@ -1,0 +1,9 @@
+<h2>Post Message</h2>
+<form (ngSubmit)="postMessage()" class="message-form">
+  <div class="form-group">
+    <label for="message">Message:</label>
+    <textarea id="message" class="form-control" [(ngModel)]="message.mesg" name="message" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Post</button>
+ 
+</form>

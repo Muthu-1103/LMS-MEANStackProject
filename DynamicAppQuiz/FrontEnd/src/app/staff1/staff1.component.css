@@ -1,0 +1,29 @@
+/* CSS for the user-table */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .user-table th {
+    text-align: left;
+    background-color: #f2f2f2;
+  }
+  
+  /* CSS for the button */
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

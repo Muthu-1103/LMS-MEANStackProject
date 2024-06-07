@@ -1,0 +1,51 @@
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning Management System</title>
+</head>
+<body>
+    
+    <header class="bg-black">
+        <nav>
+            <span class="white">Learning Management System</span>
+            <div>
+                <button class="btn bg-black white me-2" (click)="navigateTo3('/grouplist')">View Students</button>
+                <button class="btn bg-black white me-2" (click)="navigateTo3('/staff')">Create Groups</button>
+                <button class="btn bg-black white" (click)="navigateTo('/log-staff')">Logout</button>
+                <button class="button button-secondary" (click)="navigateTo2('/update-staffpass',u_name)">Change Password</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">Welcome, {{u_name}}</h1>
+            <div class="text-center mb-4">
+                <p class="lead">Manage and organize your groups effectively with our Learning Management System.</p>
+            </div>
+            <h2 class="text-center mb-4">Groups Created by {{u_name}}</h2>
+            <div class="d-grid gap-2">
+                <div *ngIf="groups.length === 0" class="text-center">
+                    <p>No Groups to display</p>
+                  </div>
+                <div *ngFor="let group of groups; let i = index" class="d-flex align-items-center justify-content-between">
+                    <span>{{ i + 1 }}.</span>
+                    <button class="tag-btn" (click)="navigateTo1('/group-det', u_name, group.gname)">
+                        {{ group.gname }}
+                    </button>
+                    <button class="btn btn-lg btn-danger" (click)="deleteGroup(u_name, group.gname)" >
+                        Delete
+                    </button>
+                    <input type="file" (change)="selectPdf($event)">
+                    <button class="tag-btn" (click)="onSubmit(group.gname)">
+                        Upload
+                    </button>
+                </div>
+            </div>
+        </div>        
+    </main>
+    <footer>
+        <p>&copy; 2024 Learning Management System. All Rights Reserved.</p>
+    </footer>
+</body>
+

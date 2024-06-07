@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.bg-image {
+  background-image: url('/assets/home.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Add a semi-transparent overlay */
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(227, 222, 222, 0.8);
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 28px; /* Increased font size */
+  margin-bottom: 15px; /* Slightly increased spacing */
+  color: #333;
+}
+
+p {
+  font-size: 18px; /* Increased font size */
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.select-box {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.login-btn,
+.register-btn {
+  padding: 12px 24px; /* Increased padding */
+  font-size: 18px; /* Increased font size */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  width: 45%;
+  transition: background-color 0.3s ease; /* Added transition */
+}
+
+.login-btn:hover,
+.register-btn:hover {
+  background-color: #0056b3;
+}
+.container {
+  position: relative;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0px 0px 40px rgba(18, 96, 191, 0.8), /* Increased spread and blur radius */
+              0px 0px 60px rgba(14, 1, 1, 0.8); /* Additional thicker shadow */
+}
+
+/* Adjust the styles for h2, p, and select-box if needed */
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.select-box {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Adjust the styles for login-btn and register-btn if needed */
+.login-btn,
+.register-btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  width: 45%;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+  background-color: #0056b3;
+}

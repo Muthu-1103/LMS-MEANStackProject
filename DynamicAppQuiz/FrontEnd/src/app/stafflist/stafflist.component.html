@@ -1,0 +1,19 @@
+<div class="user-manage">
+    <h1>Welcome</h1>
+    <p>List Of Students Registered</p>
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>EmailId</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i = index;">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

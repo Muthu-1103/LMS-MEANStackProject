@@ -1,0 +1,15 @@
+<div class="bg-image">
+  <div class="container">
+    <h2>Welcome to Learning Management System (LMS)</h2>
+    <p>Log in or register to access the system</p>
+    <div>
+      <label for="userType">Select user type:</label>
+      <select id="userType" #userType class="select-box">
+        <option value="student">Student</option>
+        <option value="staff">Staff</option>
+      </select>
+    </div>
+    <button id="btn1" class="login-btn" (click)="navLogin(userType.value)">Login</button>
+    <button id="btn2" class="register-btn" (click)="navRegister(userType.value)">Register</button>
+  </div>
+</div>

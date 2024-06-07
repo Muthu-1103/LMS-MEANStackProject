@@ -1,0 +1,50 @@
+<!--<div class="bg-im"><form [formGroup]="registerForm" (ngSubmit)="registerUser()" class="container">
+  <h1>SignUp Form</h1>
+  <div class="form-group">
+    <label for="uname">Name</label>
+    <input type="text" id="uname" class="form-control" placeholder="Enter Your name" required formControlName="uname">
+  </div>
+  <div class="form-group">
+    <label for="ps">New Password</label>
+    <input type="password" id="ps" class="form-control" required formControlName="ps">
+  </div>
+  <div class="form-group">
+    <label for="ph">Phone Number</label>
+    <input type="tel" id="ph" class="form-control" placeholder="9000000000" required formControlName="ph" />
+  </div>
+  <div class="form-group">
+    <label for="user">EMAIL ID</label>
+    <input type="email" id="user" class="form-control" required formControlName="em_id" placeholder="www@gmail.com" />
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+  <span><label>Are You a Already Registered?</label></span><a href="login" class="login-button">Login</a>
+</form>
+</div>-->
+<div class="bg-im">
+<form [formGroup]="registerForm" (ngSubmit)="registerUser()" class="container">
+  <h1>SignUp Form</h1>
+  <div class="form-group">
+    <label for="uname">Name</label>
+    <input type="text" id="uname" class="form-control" placeholder="Enter Your name" required formControlName="uname">
+    <div *ngIf="registerForm.get('uname')?.invalid && (registerForm.get('uname')?.dirty || registerForm.get('uname')?.touched)" class="text-danger">Name is required</div>
+  </div>
+  <div class="form-group">
+    <label for="ps">New Password</label>
+    <input type="password" id="ps" class="form-control" required formControlName="ps">
+    <div *ngIf="registerForm.get('ps')?.invalid && (registerForm.get('ps')?.dirty || registerForm.get('ps')?.touched)" class="text-danger">Password is required</div>
+  </div>
+  <div class="form-group">
+    <label for="ph">Phone Number</label>
+    <input type="tel" id="ph" class="form-control" placeholder="9000000000" required pattern="[0-9]{10}" formControlName="ph" />
+    <div *ngIf="registerForm.get('ph')?.invalid && (registerForm.get('ph')?.dirty || registerForm.get('ph')?.touched)"
+        class="text-danger">Invalid phone number (10 digits required)</div>
+</div>
+  <div class="form-group">
+    <label for="user">EMAIL ID</label>
+    <input type="email" id="user" class="form-control" required formControlName="em_id" placeholder="www@gmail.com" />
+    <div *ngIf="registerForm.get('em_id')?.invalid && (registerForm.get('em_id')?.dirty || registerForm.get('em_id')?.touched)" class="text-danger">Valid email is required</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+  <span><label>Are You a Already Registered?</label></span><a href="login" class="login-button">Login</a>
+</form>
+</div>
